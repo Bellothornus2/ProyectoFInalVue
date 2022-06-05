@@ -1,18 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import GetItem from '../components/GetItem.vue'
-import PostItem from '../components/PostItem.vue'
-import PutItem from '../components/PutItem.vue'
-import DeleteItem from '../components/DeleteItem.vue'
-import MaintenanceItem from '../views/MaintenanceItem.vue'
 import IndexAlcohol from '../components/IndexAlcohol.vue'
-
+import MaintenanceItem from '../views/MaintenanceItem.vue'
+import UserOrderView from '../views/UserOrderView.vue'
 Vue.use(VueRouter)
 
 const routes = [
 	{
-		path: '/alcohol/human',
-		name: 'alcohol_human',
+		path: '/alcohol/index',
+		name: 'alcohol_index',
 		component: IndexAlcohol
 	},
 	{
@@ -21,24 +17,9 @@ const routes = [
 		component: MaintenanceItem
 	},
 	{
-		path: '/getItem',
-		name: 'get_item',
-		component: GetItem
-	},
-	{
-		path: '/postItem',
-		name: 'post_item',
-		component: PostItem
-	},
-	{
-		path: '/putItem/:id',
-		name: 'put_item',
-		component: PutItem
-	},
-	{
-		path: '/deleteItem',
-		name: 'delete_item',
-		component: DeleteItem
+		path: '/orders',
+		name: 'orders',
+		component: UserOrderView
 	}
 ]
 
